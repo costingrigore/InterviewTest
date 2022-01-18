@@ -19,8 +19,8 @@ namespace InterviewTest.Controllers
          * */
 
         // Used to insert a new Employee into the database
-        [HttpPut]
-        public bool Put(string name, string value)
+        [HttpPost]
+        public bool Insert(string name, string value)
         {
             var connectionStringBuilder = new SqliteConnectionStringBuilder() { DataSource = "./SqliteDB.db" };
             using (var connection = new SqliteConnection(connectionStringBuilder.ConnectionString))
